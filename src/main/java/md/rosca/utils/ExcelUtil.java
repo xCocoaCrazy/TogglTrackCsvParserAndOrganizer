@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+import static md.rosca.sheet.processors.TotalTimeForEachProjectProcessor.populateTotalTimeForEachProjectTracked;
 import static md.rosca.sheet.processors.TotalTimeTrackedSheetProcessor.populateTotalTimeTracked;
 import static md.rosca.sheet.processors.TotalTimeByProjectProcessor.populateTotalTimeByProjectTracked;
 
@@ -21,6 +22,8 @@ public class ExcelUtil {
 
             Sheet totalTimeByProjectTracked = workbook.createSheet("Total Time By Project");
             populateTotalTimeByProjectTracked(dataByProject, totalTimeByProjectTracked);
+
+            populateTotalTimeForEachProjectTracked(dataByProject, workbook);
 
             // Write the workbook to the file system
             FileOutputStream outputStream = new FileOutputStream(excelFilePath);
