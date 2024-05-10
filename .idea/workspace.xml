@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2268df-0af2-4f0e-aa45-14b0912aaca0" name="Changes" comment="Create object that will be holder for an entry">
-      <change afterPath="$PROJECT_DIR$/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/TimeTrackingReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/processors/DataProcessor.java" afterDir="false" />
+    <list default="true" id="df2268df-0af2-4f0e-aa45-14b0912aaca0" name="Changes" comment="Add feature to track total time">
       <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/sheet/processors/TotalTimeByProjectProcessor.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/sheet/processors/TotalTimeForEachProjectProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/sheet/processors/TotalTimeTrackedSheetProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/utils/CsvUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/utils/ExcelUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/utils/TimeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/md/rosca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/md/rosca/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715358597375</updated>
-      <workItem from="1715358599161" duration="4058000" />
+      <workItem from="1715358599161" duration="4723000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1715358691883</created>
@@ -97,7 +87,28 @@
       <option name="project" value="LOCAL" />
       <updated>1715359667058</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add log4j properties">
+      <created>1715363269225</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715363269225</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add log4j properties">
+      <created>1715363287509</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715363287509</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add feature to track total time">
+      <created>1715363366880</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715363366880</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,7 +129,9 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Add dependencies to work with spreadsheets and charts" />
     <MESSAGE value="Create object that will be holder for an entry" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create object that will be holder for an entry" />
+    <MESSAGE value="Add log4j properties" />
+    <MESSAGE value="Add feature to track total time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add feature to track total time" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
