@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2268df-0af2-4f0e-aa45-14b0912aaca0" name="Changes" comment="Add dependencies to work with spreadsheets and charts">
-      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/CsvUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/DataProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/ExcelUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/TimeEntry.java" afterDir="false" />
+    <list default="true" id="df2268df-0af2-4f0e-aa45-14b0912aaca0" name="Changes" comment="Create object that will be holder for an entry">
+      <change afterPath="$PROJECT_DIR$/log4j.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/TimeTrackingReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/TotalTimeTrackedSheetProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/processors/DataProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/sheet/processors/TotalTimeByProjectProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/sheet/processors/TotalTimeForEachProjectProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/sheet/processors/TotalTimeTrackedSheetProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/utils/CsvUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/utils/ExcelUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/utils/TimeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/md/rosca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/md/rosca/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +46,26 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="md.rosca.Main" />
+      <module name="TogglTrackCsvParserAndOrganizer" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;$USER_HOME$/Downloads/Toggl_Track_summary_report_2024-01-01_2024-01-07.csv&quot; &quot;$USER_HOME$/Downloads/Report 2024-01-01_2024-01-07.xlsx&quot;" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="md.rosca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715358597375</updated>
-      <workItem from="1715358599161" duration="753000" />
+      <workItem from="1715358599161" duration="4058000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1715358691883</created>
@@ -68,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715358729202</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Create object that will be holder for an entry">
+      <created>1715359667058</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715359667058</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,6 +117,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Add dependencies to work with spreadsheets and charts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add dependencies to work with spreadsheets and charts" />
+    <MESSAGE value="Create object that will be holder for an entry" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create object that will be holder for an entry" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/md/rosca/sheet/processors/TotalTimeByProjectProcessor.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
