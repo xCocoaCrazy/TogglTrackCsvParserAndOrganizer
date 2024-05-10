@@ -4,16 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2268df-0af2-4f0e-aa45-14b0912aaca0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="df2268df-0af2-4f0e-aa45-14b0912aaca0" name="Changes" comment="Add dependencies to work with spreadsheets and charts">
+      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/CsvUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/DataProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/ExcelUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/TimeEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/TimeTrackingReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/md/rosca/TotalTimeTrackedSheetProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2gHdmC8FHg0jJ0FgzI57z3EKZNU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -36,9 +52,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715358597375</updated>
-      <workItem from="1715358599161" duration="1000" />
+      <workItem from="1715358599161" duration="753000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1715358691883</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715358691883</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add dependencies to work with spreadsheets and charts">
+      <created>1715358729202</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715358729202</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -50,5 +84,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Add dependencies to work with spreadsheets and charts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add dependencies to work with spreadsheets and charts" />
   </component>
 </project>
