@@ -2,22 +2,23 @@ package md.rosca.sheet.processors;
 
 import md.rosca.TimeEntry;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static md.rosca.utils.ExcelUtil.autoSizeColumns;
+import static md.rosca.utils.ChartUtil.createPieChart;
+import static md.rosca.utils.ExcelUtil.*;
 import static md.rosca.utils.TimeUtil.addTime;
 import static md.rosca.utils.TimeUtil.getTotalTime;
 
 public class TotalTimeByProjectProcessor {
-    public static void populateTotalTimeByProjectTracked(Map<String, List<TimeEntry>> dataByProject, Sheet totalTimeByProjectTracked) {
-        int rowNum = 0;
-        Row headerRow = totalTimeByProjectTracked.createRow(rowNum++);
-        headerRow.createCell(0).setCellValue("Project");
-        headerRow.createCell(1).setCellValue("Duration");
+    public static void populateTotalTimeByProjectTracked(Map<String, List<TimeEntry>> dataByProject, XSSFSheet totalTimeByProjectTracked) {
+        int numberOfRows = 0;
+        Row headerRow = totalTimeByProjectTracked.createRow(numberOfRows++);
+        int numberOfColumns = createHeaderRows(headerRow, "Project", "Duration");
 
         Map<String, Long> totalTimeByEachProject = new HashMap<>();
         for (List<TimeEntry> entries : dataByProject.values()) {
@@ -33,11 +34,11 @@ public class TotalTimeByProjectProcessor {
         }
 
         for (String project : totalTimeByEachProject.keySet()) {
-            Row row = totalTimeByProjectTracked.createRow(rowNum++);
+            XSSFRow row = totalTimeByProjectTracked.createRow(numberOfRows++);
             row.createCell(0).setCellValue(project);
-            row.createCell(1).setCellValue(getTotalTime(totalTimeByEachProject.get(project)));
+            createDurationCell(totalTimeByProjectTracked, row, 1, getTotalTime(totalTimeByEachProject.get(project)));
         }
-
-        autoSizeColumns(totalTimeByProjectTracked, 4);
+        createPieChart(totalTimeByProjectTracked, numberOfRows, numberOfColumns, "Time spent by project", 0, 1);
+        autoSizeColumns(totalTimeByProjectTracked, numberOfColumns);
     }
 }
