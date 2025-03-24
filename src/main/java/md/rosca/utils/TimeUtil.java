@@ -5,7 +5,11 @@ public class TimeUtil {
         return parseTimeToSeconds(time);
     }
 
-    // Helper method to parse HH:MM:SS to seconds
+    /**
+     * Helper method to parse HH:MM:SS to seconds
+     * @param time time as string
+     * @return time seconds
+     */
     public static long parseTimeToSeconds(String time) {
         String[] parts = time.split(":");
         int hours = Integer.parseInt(parts[0]);
@@ -14,7 +18,11 @@ public class TimeUtil {
         return hours * 3600L + minutes * 60L + seconds;
     }
 
-    // Method to get total time in HH:MM:SS format
+    /**
+     * Method to get total time in HH:MM:SS format
+     * @param totalSeconds total seconds
+     * @return total time in hours, minutes and seconds
+     */
     public static String getTotalTime(long totalSeconds) {
         long seconds = totalSeconds % 60;
         long totalMinutes = totalSeconds / 60;

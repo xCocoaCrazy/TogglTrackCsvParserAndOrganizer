@@ -6,7 +6,15 @@ import java.io.FileNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+/**
+ * Util that helps generate the name for the Excel file
+ */
 public class FileNameGeneratorUtil {
+    /**
+     * Generates the file name.
+     * @param destination destination as file or folder
+     * @return name of the file with extension
+     */
     public static String generateFileName(String destination) {
         String pathType = inferPathType(destination);
         if (pathType.equals("folder")) {
@@ -25,6 +33,11 @@ public class FileNameGeneratorUtil {
         return pathType;
     }
 
+    /**
+     * Method to understand if the destination path is folder or file
+     * @param pathString path
+     * @return "file" if path points to a file, otherwise "folder"
+     */
     public static String inferPathType(String pathString) {
         Path path = Path.of(pathString);
 
@@ -45,6 +58,12 @@ public class FileNameGeneratorUtil {
         return "invalid";
     }
 
+    /**
+     * Replaces .csv with .xlsx
+     * @param fileName name of the file
+     * @param newExtension new extension that you want to use
+     * @return name of the file
+     */
     private static String replaceExtension(String fileName, String newExtension) {
         int dotIndex = fileName.lastIndexOf('.');
         if (dotIndex == -1) {

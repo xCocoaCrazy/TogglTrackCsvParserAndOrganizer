@@ -9,6 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CsvUtil {
+    /**
+     * Read the data from the csv file
+     * @param filePath path of the file
+     * @return list of all the time entries
+     */
     public static List<TimeEntry> readCsvData(String filePath) {
         List<TimeEntry> entries = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {

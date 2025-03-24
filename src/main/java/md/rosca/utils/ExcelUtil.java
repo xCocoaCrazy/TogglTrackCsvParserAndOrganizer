@@ -25,6 +25,11 @@ public class ExcelUtil {
     private static CellStyle timeCellStyle;
     private static XSSFSheet previousSheet;
 
+    /**
+     * Writes all the data to the excel file
+     * @param dataByProject Map where the key is the name of the project and all it's entries
+     * @param destination destination where the file should be saved
+     */
     public static void writeExcel(Map<String, List<TimeEntry>> dataByProject, String destination) {
         try (XSSFWorkbook workbook = new XSSFWorkbook()) {
             XSSFSheet totalTimeTracked = workbook.createSheet("Total Time Tracked");
@@ -45,6 +50,12 @@ public class ExcelUtil {
         }
     }
 
+    /**
+     * Create output stream for writing to file
+     * @param destination destination for excel
+     * @return output stream for writing to file
+     * @throws IOException in case it can't create directories
+     */
     private static FileOutputStream createFileOutputStream(String destination) throws IOException {
         // Generate the file name with folder structure
         String filePath = FileNameGeneratorUtil.generateFileName(destination);
@@ -69,6 +80,12 @@ public class ExcelUtil {
         }
     }
 
+    /**
+     * Create the columns in the first row
+     * @param headerRow first row where the columns will be written
+     * @param columns list of columns to write
+     * @return number of columns created
+     */
     public static int createHeaderRows(Row headerRow, String... columns) {
         int numberOfColumns = 0;
         for (String column : columns) {
@@ -77,6 +94,7 @@ public class ExcelUtil {
         return numberOfColumns;
     }
 
+    //Set cell style for time spent
     public static void createDurationCell(XSSFSheet sheet, XSSFRow row, int columnIndex, String entry) {
         XSSFCell durationCell = row.createCell(columnIndex);
         durationCell.setCellValue(ExcelUtil.convertTimeToExcelDate(entry));

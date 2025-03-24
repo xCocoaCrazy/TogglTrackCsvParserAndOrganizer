@@ -13,9 +13,13 @@ import static md.rosca.utils.TimeUtil.addTime;
 import static md.rosca.utils.TimeUtil.getTotalTime;
 
 public class TotalTimeTrackedSheetProcessor {
+    /**
+     * Populates the sheet of the excel with all the data available
+     * @param dataByProject Map where the key is the name of the project and all it's entries
+     * @param totalTimeTracked sheet for all the data entries
+     */
     public static void populateTotalTimeTracked(Map<String, List<TimeEntry>> dataByProject, XSSFSheet totalTimeTracked) {
         int numberOfRows = 0;
-
         Row headerRow = totalTimeTracked.createRow(numberOfRows++);
         int numberOfColumns = createHeaderRows(headerRow, "Project", "Description", "Duration", "Total Time");
 
