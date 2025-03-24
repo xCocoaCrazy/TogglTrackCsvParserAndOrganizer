@@ -11,6 +11,15 @@ import org.apache.poi.xssf.usermodel.XSSFDrawing;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 
 public class ChartUtil {
+    /**
+     * Generate pie chart
+     * @param sheet sheet where to create the chart
+     * @param numberOfRows number of rows for the table
+     * @param numberOfColumns number of columns for the table
+     * @param chartTitle title of the chart
+     * @param columnOfDescriptionForChart
+     * @param columnOfTimeSpentForChart
+     */
     public static void createPieChart(XSSFSheet sheet, int numberOfRows, int numberOfColumns, String chartTitle, int columnOfDescriptionForChart, int columnOfTimeSpentForChart) {
         XSSFDrawing drawing = sheet.createDrawingPatriarch();
         XSSFClientAnchor anchor = drawing.createAnchor(0, 0, 0, 0, numberOfColumns, 0, 25, 60);
